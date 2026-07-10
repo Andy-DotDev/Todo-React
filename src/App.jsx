@@ -1,13 +1,7 @@
-const Username = "Andy";
+import Todo from "./components/Todo";
 
 const App = () => {
-  return (
-    <>
-      <h1>ToDo List</h1>
-      <p>Hi, {Username}</p>
-      <p>{new Date().toLocaleDateString()}</p>
-    </>
-  );
+  return <Todo />;
 };
 
 export default App;
