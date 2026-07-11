@@ -3,13 +3,18 @@ import SearchTaskForm from "./SearchTaskForm";
 import TodoInfo from "./TodoInfo";
 import TodoList from "./TodoList";
 const Todo = () => {
+  const tasks = [{ id: "task-1", title: "Купить молоко", isDone: false }];
+
   return (
     <div className="todo">
       <h1 className="todo__title">To Do List</h1>
       <AddTaskform />
       <SearchTaskForm />
-      <TodoInfo />
-      <TodoList />
+      <TodoInfo
+        total={tasks.length}
+        done={tasks.filter(({ isDone }) => isDone).length}
+      />
+      <TodoList tasks={tasks} />
     </div>
   );
 };

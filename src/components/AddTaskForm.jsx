@@ -4,8 +4,13 @@ import Field from "./Field";
 const AddTaskform = () => {
   return (
     <form className="todo__form">
-      <Field />
-      <Button />
+      <Field
+        className="todo__form"
+        label="Название задачи
+    "
+        id="new-task"
+      />
+      <Button type="submit">Добавить</Button>
     </form>
   );
 };
