@@ -1,7 +1,7 @@
 import TodoItem from "./TodoItem";
 
 const TodoList = (props) => {
-  const { tasks = [] } = props;
+  const { tasks = [], onDeleteTaskBtn, onTaskCompleteChange } = props;
 
   const hasTasks = true;
   if (!hasTasks) {
@@ -10,7 +10,13 @@ const TodoList = (props) => {
   return (
     <ul className="todo__list">
       {tasks.map((task) => (
-        <TodoItem className="todo__item" key={task.id} {...task} />
+        <TodoItem
+          onDeleteTaskBtn={onDeleteTaskBtn}
+          className="todo__item"
+          onTaskCompleteChange={onTaskCompleteChange}
+          key={task.id}
+          {...task}
+        />
       ))}
     </ul>
   );
