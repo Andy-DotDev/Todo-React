@@ -1,3 +1,4 @@
+import { memo } from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList = (props) => {
@@ -35,4 +36,4 @@ const TodoList = (props) => {
     </ul>
   );
 };
-export default TodoList;
+export default memo(TodoList);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 const TodoInfo = (props) => {
   const { total, done, onDeleteAllBtnClick } = props;
 
@@ -20,4 +21,4 @@ const TodoInfo = (props) => {
   );
 };
 
-export default TodoInfo;
+export default memo(TodoInfo);

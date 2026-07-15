@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Field from "./Field";
 
-const AddTaskform = (props) => {
+const AddTaskForm = (props) => {
   const { addTask, newTaskTitle, setNewTaskTitle, newTaskInputRef } = props;
 
   const onSubmit = (event) => {
@@ -24,4 +24,4 @@ const AddTaskform = (props) => {
   );
 };
 
-export default AddTaskform;
+export default AddTaskForm;
